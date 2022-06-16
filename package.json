@@ -1,5 +1,5 @@
 {
-  "name": "@cryptoswap/sdk",
+  "name": "@crypto-swap/sdk",
   "license": "MIT",
   "version": "1.0.4",
   "description": "🛠 An SDK for building applications on top of CryptoSwap.",
@@ -8,7 +8,10 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/cryptoswap/sdk.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryptoswap/sdk.git"
+  },
   "keywords": [
     "cryptoswap",
     "zksync"
@@ -54,5 +57,13 @@
     "printWidth": 120,
     "semi": false,
     "singleQuote": true
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/cryptoswap/sdk/issues"
+  },
+  "homepage": "https://github.com/cryptoswap/sdk#readme",
+  "directories": {
+    "test": "test"
+  },
+  "author": "natlou"
 }
