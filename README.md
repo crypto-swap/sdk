@@ -1,4 +1,4 @@
-# Pancakeswap SDK
+# CryptoSwap SDK
 
 Forked from the [Uniswap SDK](https://github.com/Uniswap/uniswap-v2-sdk/commit/a88048e9c4198a5bdaea00883ca00c8c8e582605).
 
@@ -11,19 +11,19 @@ To run the tests, follow these steps. You must have at least node v10 and [yarn]
 First clone the repository:
 
 ```sh
-git clone https://github.com/pancakeswap/pancake-swap-sdk.git
+git clone https://github.com/CryptoSwap/sdk.git
 ```
 
-Move into the pancakeswap-sdk working directory
+Move into the sdk working directory
 
 ```sh
-cd pancakeswap-sdk/
+cd sdk
 ```
 
 Install dependencies
 
 ```sh
-yarn install
+yarn
 ```
 
 Run tests
