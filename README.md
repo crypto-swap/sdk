@@ -1,53 +1,33 @@
-# CryptoSwap SDK
+# Introduction
 
-Forked from the [Uniswap SDK](https://github.com/Uniswap/uniswap-v2-sdk/commit/a88048e9c4198a5bdaea00883ca00c8c8e582605).
+Whitepaper: [https://cryptoswap.org/whitepaper.pdf](https://cryptoswap.org/whitepaper.pdf)
 
-You can refer to the Uniswap SDK documentation [uniswap.org](https://docs.uniswap.org/sdk/2.0.0/).
+#### Two-fold Protection:
 
-## Running tests
+**CryptoSwap has two goals:**
 
-To run the tests, follow these steps. You must have at least node v10 and [yarn](https://yarnpkg.com/) installed.
+1. Protect Liquidity Providers from impermanent loss and wide spreads.
+2. Protect Traders from MEV (frontrunning) and wide spreads.
 
-First clone the repository:
+#### What we do:
 
-```sh
-git clone https://github.com/CryptoSwap/sdk.git
-```
+1. **CryptoSwap allows liquidity providers to choose their impermanent loss (liquidity options)**
+2. **CryptoSwap has more accurate prices (with liquidity options)**
+3. **More accurate prices -> Thinner spreads -> Less Arbitrage Opportunities -> Liquidity Providers bleed less money -> Liquidity Providers earn more money**
 
-Move into the sdk working directory
+#### MEV Aware DEX Design:
 
-```sh
-cd sdk
-```
+Transactions go from:
 
-Install dependencies
+User -> Wallet -> Searcher -> Builder/Miner -> Validator
 
-```sh
-yarn
-```
+Problems: Front/Back Running and Sandwich Attacks
 
-Run tests
+We are still in the process of figuring out how to solve this.
 
-```sh
-yarn test
-```
+1. Slippage tolerance
+2. Time locked encryption to prevent front-running attacks. [https://vsekar.me/assets/diss.pdf](https://vsekar.me/assets/diss.pdf)
+3. Batched Sub-Orders
+4. ⛏️ We mine your orders ⛏️
 
-You should see output like the following:
-
-```sh
-yarn run v1.22.4
-$ tsdx test
- PASS  test/constants.test.ts
- PASS  test/pair.test.ts
- PASS  test/fraction.test.ts
- PASS  test/miscellaneous.test.ts
- PASS  test/entities.test.ts
- PASS  test/trade.test.ts
-
-Test Suites: 1 skipped, 6 passed, 6 of 7 total
-Tests:       3 skipped, 82 passed, 85 total
-Snapshots:   0 total
-Time:        5.091s
-Ran all test suites.
-✨  Done in 6.61s.
-```
+But one thing is for certain: **we are aware of this issue.**
